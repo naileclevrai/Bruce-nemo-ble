@@ -1,5 +1,4 @@
-# Nailec Firm discord
-## https://discord.gg/mmqCHfuQ3U
+
 
 ![Bruce Main Menu](./media/pictures/bruce_banner.jpg)
 
