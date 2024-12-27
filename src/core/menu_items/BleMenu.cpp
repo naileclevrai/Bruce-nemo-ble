@@ -20,9 +20,6 @@ void BleMenu::optionsMenu() {
         options.push_back({"BLE Scan",     [=]() { ble_scan(); }});
         options.push_back({"Bad BLE",      [=]() { ble_setup(); }});
     #endif
-    #if defined(HAS_KEYBOARD_HID)
-        options.push_back({"BLE Keyboard", [=]() { ble_keyboard(); }});
-    #endif
     options.push_back({"iOS Spam",     [=]() { aj_adv(0); }});
     options.push_back({"Windows Spam", [=]() { aj_adv(1); }});
     options.push_back({"Samsung Spam", [=]() { aj_adv(2); }});
