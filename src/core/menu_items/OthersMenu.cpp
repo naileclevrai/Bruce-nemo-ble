@@ -13,6 +13,7 @@
 #ifdef HAS_RGB_LED
 #include "modules/others/led_control.h"
 #endif
+#include <modules/others/record_audio_sd.h>
 
 void OthersMenu::optionsMenu() {
     options = {
@@ -23,6 +24,7 @@ void OthersMenu::optionsMenu() {
         {"Megalodon",    [=]() { shark_setup(); }},
     #ifdef MIC_SPM1423
         {"Mic Spectrum", [=]() { mic_test(); }},
+        //{"Enregistreur audio", [=]() { recordAudioToSD(); }},
     #endif
         {"BadUSB",       [=]() { usb_setup(); }},
     #ifdef HAS_KEYBOARD_HID
