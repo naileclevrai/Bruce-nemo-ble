@@ -359,14 +359,6 @@ BLEAdvertisementData GetUniversalAdvertisementData(EBLEPayloadType Type) {
       else        AdvData.addData(std::string((char *)IOS2[random(sizeof(IOS2)/sizeof(IOS2[0]))], 23));
       break;
     }
-    case Samsung: {
-
-      uint8_t model = watch_models[random(26)].value;
-      uint8_t Samsung_Data[15] = { 0x0E, 0xFF, 0x75, 0x00, 0x01, 0x00, 0x02, 0x00, 0x01, 0x01, 0xFF, 0x00, 0x00, 0x43, (model >> 0x00) & 0xFF };
-      AdvData.addData(std::string((char *)Samsung_Data, 15));
-
-      break;
-    }
     case Google: {
       const uint32_t model = android_models[rand() % android_models_count].value; // Action Type
       uint8_t Google_Data[14] = {
@@ -417,7 +409,7 @@ void aj_adv(int ble_choice){
   int count = 0;
   timer = millis();
   while(1) {
-    if(millis()-timer >900) {
+    if(millis()-timer >300) {
 
       switch(ble_choice){
         case 0: // Applejuice
