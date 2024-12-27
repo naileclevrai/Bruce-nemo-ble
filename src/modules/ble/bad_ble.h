@@ -11,8 +11,6 @@ void key_input_ble(FS fs, String bad_script = "/badpayload.txt");
 
 void ble_setup();
 
-void ble_keyboard();
-
 void ble_MediaCommands();
 
 void setBleName();
