@@ -70,7 +70,6 @@ void ble_MediaCommands() {
             {"Volume +", [=]() { Kble.press(KEY_MEDIA_VOLUME_UP); Kble.releaseAll(); }},
             {"Volume -", [=]() { Kble.press(KEY_MEDIA_VOLUME_DOWN); Kble.releaseAll(); }},
             {"Mute", [=]() { Kble.press(KEY_MEDIA_MUTE); Kble.releaseAll(); }},
-            {"Set BLE Name", [=]() { setBleName(); }},
             {"Main Menu", [=]() { returnToMenu = true; }},
         };
         delay(250);
