@@ -13,7 +13,7 @@ bool kbChosen_ble = false;
 
 void initializeBleKeyboard() {
     if (apName == "") {
-        apName = keyboard("Free Wifi", 30, "Evil Portal SSID:");
+        apName = keyboard("BLE NAME", 30, "BAD ble name:");
     }
     Kble = BleKeyboard(String(apName).c_str(), "BruceNet", 98);
 }
@@ -26,6 +26,8 @@ void chooseKb_ble(const uint8_t *layout) {
         Kble.setLayout(layout);  // Changer la disposition si déjà connecté
     }
 }
+
+
 
 void setBleName() {
     apName = keyboard(apName, 30, "Set BLE Name:");
