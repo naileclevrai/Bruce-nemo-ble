@@ -1,4 +1,4 @@
-#include "core/globals.h"
+#include <globals.h>
 #include "core/sd_functions.h"
 #include "core/main_menu.h"
 #include "core/display.h"
@@ -219,7 +219,7 @@ void key_input_ble(FS fs, String bad_script) {
 
           Kble.releaseAll();
 
-          if (tft.getCursorY()>(HEIGHT-LH)) {
+          if (tft.getCursorY()>(tftHeight-LH) {
             tft.setCursor(0, 0);
             tft.fillScreen(bruceConfig.bgColor);
           }
